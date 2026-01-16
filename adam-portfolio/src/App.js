@@ -1,24 +1,51 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import Skills from './components/Skills/Skills';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
+import Testimonials from './components/Testimonials/Testimonials';
+import CTA from './components/CTA/CTA';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Loader from './components/Loader/Loader';
 import './App.css';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <AnimatePresence mode="wait">
+          {loading ? (
+            <Loader key="loader" setLoading={setLoading} />
+          ) : (
+            <>
+              <Navbar />
+              <main>
+                <Hero />
+                <About />
+                <Services />
+                <Skills />
+                <Experience />
+                <Projects />
+                <Testimonials />
+                <CTA />
+                <Contact />
+              </main>
+              <Footer />
+              <ScrollToTop />
+            </>
+          )}
+        </AnimatePresence>
+      </div>
+    </ThemeProvider>
   );
 }
 
