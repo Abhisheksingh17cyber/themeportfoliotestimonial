@@ -11,15 +11,15 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const titles = [
-    'Software Head',
-    'Tech Leader',
-    'Full Stack Developer',
-    'System Architect',
-    'Innovation Driver'
-  ];
-
   useEffect(() => {
+    const titles = [
+      'Software Head',
+      'Tech Leader',
+      'Full Stack Developer',
+      'System Architect',
+      'Innovation Driver'
+    ];
+
     const handleTyping = () => {
       const i = loopNum % titles.length;
       const fullText = titles[i];
@@ -42,7 +42,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed, titles]);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
