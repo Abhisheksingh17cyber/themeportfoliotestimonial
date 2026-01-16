@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FiDownload, FiArrowRight, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import TechAnimation from '../TechAnimation/TechAnimation';
 import './Hero.css';
 
 const Hero = () => {
@@ -65,6 +66,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
+      <TechAnimation />
       <div className="hero-bg">
         <div className="hero-gradient"></div>
         <div className="hero-particles">

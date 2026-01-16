@@ -1,0 +1,269 @@
+.skills-chart-section {
+  padding: 100px 0;
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-chart-section::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+  top: -200px;
+  left: -200px;
+}
+
+.skills-chart-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  margin-top: -30px;
+}
+
+/* Chart Selector */
+.chart-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.chart-btn {
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chart-btn:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.chart-btn.active {
+  background: var(--gradient);
+  border-color: transparent;
+  color: var(--background);
+}
+
+/* Charts Container */
+.charts-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.chart-wrapper {
+  background: rgba(18, 18, 26, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Radar Chart */
+.radar-chart {
+  display: flex;
+  justify-content: center;
+}
+
+.radar-svg {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Bar Chart */
+.bar-chart {
+  max-width: 700px;
+}
+
+.bar-item {
+  margin-bottom: 25px;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bar-name {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.bar-percentage {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.bar-track {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.bar-glow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.8;
+}
+
+/* Donut Chart */
+.donut-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.donut-svg {
+  width: 250px;
+  height: 250px;
+}
+
+.donut-svg path {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donut-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legend-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.legend-value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Performance Metrics */
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.metric-card {
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 217, 255, 0.15);
+}
+
+.metric-icon {
+  font-size: 2.5rem;
+}
+
+.metric-info {
+  flex: 1;
+}
+
+.metric-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.metric-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.metric-fill {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 3px;
+}
+
+.metric-value {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .performance-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .chart-wrapper {
+    padding: 25px;
+  }
+
+  .performance-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-selector {
+    gap: 10px;
+  }
+
+  .chart-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

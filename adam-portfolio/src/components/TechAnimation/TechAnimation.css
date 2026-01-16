@@ -1,0 +1,104 @@
+.tech-animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Grid Background */
+.tech-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-line {
+  position: absolute;
+  background: var(--primary);
+}
+
+.grid-line.horizontal {
+  width: 100%;
+  height: 1px;
+  left: 0;
+}
+
+.grid-line.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+}
+
+/* Floating Tech Icons */
+.floating-tech-icon {
+  position: absolute;
+  filter: drop-shadow(0 0 15px currentColor);
+  z-index: 2;
+}
+
+.floating-tech-icon svg {
+  transition: all 0.3s ease;
+}
+
+/* Circuit SVG */
+.circuit-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Data Particles */
+.data-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.data-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* Binary Rain */
+.binary-rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.binary-column {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--primary);
+  opacity: 0.15;
+  line-height: 1.5;
+}
+
+.binary-column span {
+  text-shadow: 0 0 5px currentColor;
+}
+
+@media (max-width: 768px) {
+  .floating-tech-icon {
+    transform: scale(0.7);
+  }
+
+  .binary-rain {
+    display: none;
+  }
+}

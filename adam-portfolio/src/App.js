@@ -6,8 +6,12 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
+import SkillsChart from './components/SkillsChart/SkillsChart';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import CodeEditor from './components/CodeEditor/CodeEditor';
+import WorkStation from './components/WorkStation/WorkStation';
+import ParallaxSection from './components/ParallaxSection/ParallaxSection';
 import Testimonials from './components/Testimonials/Testimonials';
 import CTA from './components/CTA/CTA';
 import Contact from './components/Contact/Contact';
@@ -32,9 +36,13 @@ function App() {
                 <Hero />
                 <About />
                 <Services />
+                <SkillsChart />
                 <Skills />
+                <WorkStation />
                 <Experience />
+                <CodeEditor />
                 <Projects />
+                <ParallaxSection />
                 <Testimonials />
                 <CTA />
                 <Contact />
